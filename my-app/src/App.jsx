@@ -1,6 +1,8 @@
-function App() {
+function App() { 
+  const name = "shayan "
   return (
-   <h1>i am react thourt vite</h1>
+   <h1>i am react through vite {name} is working on react MF</h1>
+   
   )
 }
 
