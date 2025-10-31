@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+div.main-div{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:end;
+    background-color:pink;
+}
+div.child{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: rgb(158, 191, 219);
+  border-radius: 12px;
+  padding:12px;
+  margin-bottom: 8px;
+}
+.common{
+  width: 80px;
+  margin:10px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  font-weight: 700;
+  border: none;
+}
+
+.child1{
+background-color: red;
+}
+.child2{
+background-color: green;
+
+}
+.child3{ 
+background-color: blue;
+
+}
+.child4{
+background-color: olive;
+
+}
+.child5{
+background-color: gray;
+
+}
+.child6{
+background-color: yellow;
+color: black;
+}
+.child7{
+background-color: lavender;
+color: black;
+}
+.child8{
+background-color: white;
+color: black;
+}
+.child9{
+background-color: black;
+}
