@@ -34,7 +34,7 @@ function App() {
   },[Password])
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 ">
+      <div className="w-full max-w-lg mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 ">
         <h3 className="text-4xl text-white">Password Generator</h3>
 
         <div className="flex shadow rounded-lg overflow-hidden my-4 ">
@@ -44,17 +44,18 @@ function App() {
             value={Password}
             placeholder="Your Password"
             ref={passwordRef}
+            readOnly
           />
-          <button onClick ={copypass} className='text-white bg-blue-500 py-0.5 px-3 outline-none shrink-0 fw-bold cursor-pointer'>COPY</button>
+          <button onClick ={copypass} className='font-medium text-white bg-orange-500  py-0.5 px-3 outline-none shrink-0 fw-bold cursor-pointer'>COPY</button>
         </div>
 
         <div className="flex justify-between text-white my-2 ">
           <input
             type="range"
             min="8"
-            max="100"
+            max="40"
             value={length}
-            className='accent-blue-500 cursor-pointer '
+            className='accent-orange-500 cursor-pointer '
             onChange={(e) => { setlength(Number(e.target.value)) }}
           />
           <label className='text-orange-500'> Length : {length}</label>
