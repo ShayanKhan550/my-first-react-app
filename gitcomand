@@ -1,0 +1,47 @@
+Here’s the basic Git branch + Pull Request (PR) workflow step-by-step 👇
+
+Clone the repo (first time only)
+
+git clone <repo-url>
+cd <repo-name>
+
+
+Create a new branch for your task
+
+git checkout -b feature/your-task-name
+
+
+Do your code changes
+Edit, add, or delete files as needed.
+
+Stage and commit your changes
+
+git add .
+git commit -m "Add feature: your message here"
+
+
+Push your branch to GitHub
+
+git push origin feature/your-task-name
+
+
+Create a Pull Request (PR)
+
+Go to GitHub → your repo → “Compare & pull request”
+
+Add a clear title + description
+
+Choose the base branch (usually main or develop)
+
+Submit the PR for review
+
+Review & Merge
+
+Team reviews your code
+
+If approved → PR is merged into main branch
+
+Clean up
+
+git branch -d feature/your-task-name      # delete local branch
+git push origin --delete feature/your-task-name   # delete remote branch
