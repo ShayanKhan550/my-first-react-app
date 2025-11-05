@@ -1,27 +1,35 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
+import { useCallback } from 'react';
+
 
 export default function Card(props) {
+
     return (
         <>
 
-            <div className='card-div flex justify-between mt-5 w-240 m-auto border-[1.5px] p-4 rounded-lg'>
+            <div className='card-div flex justify-between mt-5 w-220 m-auto border-[1.5px] p-4 rounded-lg'>
                 <input
                     type="text"
                     className='bg-white border-none w- text-3xl flex-grow  rounded-lg focus:outline-none'
                     placeholder='Your Password'
                     Value={props.Password}
+                    ref = {props.reference}
                 />
                 <div className=" flex gap-x-4">
                     <button
                         onClick={() => { props.passgen((prev) => !prev) }}
                     >
                         <FontAwesomeIcon
-                            className='text-1xl cursor-pointer'
+                            className='text-1xl cursor-pointer text-gray-600'
                             icon={faRotate} 
                         />
                     </button>
-                    <button className='btn bg-[#d71340] cursor-pointer p-3 font-bold text-white rounded-lg'>Copy Password</button>
+
+                    <button
+                    className='btn bg-[#d71340] cursor-pointer p-3 font-bold text-white rounded-lg'
+                    onClick={props.copy}
+                    >Copy Password</button>
                 </div>
 
             </div>

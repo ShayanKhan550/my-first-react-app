@@ -1,7 +1,7 @@
 import './App.css'
 import PageHead from "./components/pageheadtext.jsx";
 import Card from "./components/card.jsx"
-import { use, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState , useRef } from 'react';
 function App() {
   const [Length, setLength] = useState(8)
   const [upperchar, setupperchar] = useState(false)
@@ -9,6 +9,8 @@ function App() {
   const [num, setnum] = useState(false)
   const [Password, setPassword] = useState("")
   const [click , setclick] = useState(false)
+
+  // CALLBACK HOOK
   const passgen = useCallback(() => {
     let pass = ""
     let str = "abcdefghijklmnopqrstuvwxyz"
@@ -24,10 +26,19 @@ function App() {
 
   }, [Length, upperchar, symbols, num])
 
+  const copy =useCallback(()=>{
+    window.navigator.clipboard.writeText(Password)
+  },[Password])
+
+  // USE EFFECT HOOK
   useEffect(() => {
     passgen()
   }, [Length, upperchar, symbols, num , click])
-  console.log(upperchar)
+  
+
+  // USE REF HOOK
+  const reference= useRef(null)
+
   return (
     <>
       <PageHead h1="" tect="bold" />
@@ -38,6 +49,8 @@ function App() {
         setsymbols={setsymbols}
         setnum ={setnum}
         passgen={setclick}
+        reference={reference}
+        copy = {copy}
       />
     </>
   )

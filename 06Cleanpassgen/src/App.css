@@ -11,3 +11,11 @@
 .font-300{
   font-weight: 600;
 }
+ input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    height:18px;
+    width:18px;
+    background:#4f46e5; /* purple */
+    border-radius:50%;
+    cursor:pointer;
+  }
