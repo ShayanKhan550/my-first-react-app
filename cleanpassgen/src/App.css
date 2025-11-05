@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+HU:wght@100..400&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Source Sans 3", sans-serif;
+}
+.font-300{
+  font-weight: 600;
+}
