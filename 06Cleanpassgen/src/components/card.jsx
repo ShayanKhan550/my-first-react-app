@@ -18,9 +18,10 @@ export default function Card(props) {
                 />
                 <div className=" flex gap-x-4 ml-4 btn-div">
                     <button
-                        onClick={() => { props.passgen((prev) => !prev) }}
                     >
                         <FontAwesomeIcon
+                        onClick={() => { props.regenerate((prev) => !prev) }}
+
                             className='text-1xl cursor-pointer text-gray-600'
                             icon={faRotate}
                         />

@@ -10,6 +10,10 @@ function App() {
   const [Password, setPassword] = useState("")
   const [click , setclick] = useState(false)
 
+ // USE REF HOOK
+  const reference= useRef(null)
+
+
   // CALLBACK HOOK
   const passgen = useCallback(() => {
     let pass = ""
@@ -27,8 +31,17 @@ function App() {
   }, [Length, upperchar, symbols, num])
 
   const copy =useCallback(()=>{
+    reference.current?.select()
+    // it is for defing the range like how much text you wantto copy
+    reference.current?.setSelectionRange(0,48)
     window.navigator.clipboard.writeText(Password)
+
   },[Password])
+
+  // const copy = () =>{
+  //   window.navigator.clipboard.writeText(Password)
+  //   reference.current?.select()
+  // }
 
   // USE EFFECT HOOK
   useEffect(() => {
@@ -36,9 +49,7 @@ function App() {
   }, [Length, upperchar, symbols, num , click])
   
 
-  // USE REF HOOK
-  const reference= useRef(null)
-
+ 
   return (
     <>
       <PageHead h1="" tect="bold" />
@@ -48,7 +59,7 @@ function App() {
         setupperchar={setupperchar}
         setsymbols={setsymbols}
         setnum ={setnum}
-        passgen={setclick}
+        regenerate={setclick}
         reference={reference}
         copy = {copy}
       />
