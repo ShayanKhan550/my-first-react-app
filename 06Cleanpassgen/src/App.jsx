@@ -32,7 +32,7 @@ function App() {
 
   const copy =useCallback(()=>{
     reference.current?.select()
-    // it is for defing the range like how much text you wantto copy
+    // it is for defining the range like how much text you wantto copy
     reference.current?.setSelectionRange(0,48)
     window.navigator.clipboard.writeText(Password)
 
