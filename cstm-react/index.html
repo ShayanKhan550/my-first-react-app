@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div id="root">    
+    <div id="root">
         <ul class="print">
         </ul>
+        <div class="div"></div>
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <button type="submit">Submit</button>
+        </form>
     </div>
+    <h1>CSTM REACT</h1>
+    <div class="divs" style="width: 90px; height: 90px ; border: 2px solid green ; margin-bottom: 10px;"></div>
+    <button id="stop">Stop</button>
     <script src="/cstm-react/cstmreact.js"></script>
+
+
+    <script>
+        const h1 = document.querySelector('h1');
+        const div = document.getElementsByClassName('divs')[0]
+        const stop = setTimeout(() => {
+            div.style.backgroundColor = 'red'
+        }, 2000)
+            addEventListener('click' , ()=>{
+            clearTimeout(stop)
+            div.style.backgroundColor='green'
+            console.log("btn clicked color is green")
+            })
+    </script>
+
 </body>
+
 </html>

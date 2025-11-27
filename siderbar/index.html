@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .d-flex {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: aliceblue;
+            width: 400px;
+            height: 100%;
+            box-sizing: border-box;
+            margin-right: 40px;
+            transition: width 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        }
+        span{
+            font-size: 24px;
+            border-bottom: 1px solid gray;
+            margin-bottom: 40px;
+            margin-right: 16px;
+            display: inline-block;
+        }
+        .header{
+            padding: 20px;
+        }
+        img{
+            cursor: pointer;
+        }
+        ul li{
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+
+        }
+        li::marker{
+            display: none;
+        }
+        .collapse{
+            width: 80px !important;
+            transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .collapse :is(ul,.header) {
+            opacity: 0;
+            transition: opasity 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        img{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="sidebar">
+           <div class="header">
+             <span>Welcome to our site</span>
+           </div>
+            <ul>
+                <li>HOME</li>
+                <li>Product</li>
+                <li>Customer</li>
+                <li>Shop</li>
+                <li>Income</li>
+                <li>Promote</li>
+            </ul>
+        </div>
+        <div style="background-color: aqua; width: 100%; height: 100%;">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE9RZiNP06a3tARUuTFm-Gl3akiaE5UHJ3QPCgAp2gdA&s" alt="" width="30px" height="30px">
+
+        </div>
+    </div>
+    <script>
+        const logo = document.getElementsByClassName('logo')[0]
+        const sidebar = document.getElementsByClassName('sidebar')[0]
+        const ul = document.querySelector('ul')
+        const header = document.getElementsByClassName('header')
+        logo.addEventListener('click' ,()=>{
+            sidebar.classList.toggle('collapse')
+        });
+        if(sidebar.classList.contain('collapse')){
+            ul.style.display='none'
+
+        }
+
+    </script>
+</body>
+            <!-- document.getElementsByClassName('sidebar')[0].classList.toggle('collapse'); -->
+</html>
