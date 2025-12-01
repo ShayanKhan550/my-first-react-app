@@ -3,7 +3,7 @@ import './index.css'
 import App from './App.jsx'
 import { Route, RouterProvider, Routes, createBrowserRouter , createRoutesFromElements } from "react-router-dom"
 import Home from './components/Home/Home.jsx'
-import About from './components/About/About.jsx'
+import About from './components/about/About.jsx'
 import Contact from './components/contact/Contact.jsx'
 import User from './components/user/User.jsx'
 import Github from './components/github/Github.jsx'
@@ -37,7 +37,7 @@ const router = createBrowserRouter(
             <Route path='contact' element={<Contact/>}/>
             <Route path='git' element={<Github/>}/>
             <Route path='user/:useid/:usename' element={<User/>}/>
-            
+
         </Route>
     )
 )

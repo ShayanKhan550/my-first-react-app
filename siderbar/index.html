@@ -68,7 +68,7 @@
     <div class="d-flex">
         <div class="sidebar">
            <div class="header">
-             <span>Welcome to our site</span>
+             <span id="span">Welcome to our site</span>
            </div>
             <ul>
                 <li>HOME</li>
@@ -85,19 +85,24 @@
         </div>
     </div>
     <script>
-        const logo = document.getElementsByClassName('logo')[0]
-        const sidebar = document.getElementsByClassName('sidebar')[0]
-        const ul = document.querySelector('ul')
-        const header = document.getElementsByClassName('header')
-        logo.addEventListener('click' ,()=>{
-            sidebar.classList.toggle('collapse')
-        });
-        if(sidebar.classList.contain('collapse')){
-            ul.style.display='none'
+        // const logo = document.getElementsByClassName('logo')[0]
+        // const sidebar = document.getElementsByClassName('sidebar')[0]
+        // const ul = document.querySelector('ul')
+        // const header = document.getElementsByClassName('header')
+        // logo.addEventListener('click' ,()=>{
+        //     sidebar.classList.toggle('collapse')
+        // });
+        // if(sidebar.classList.contain('collapse')){
+        //     ul.style.display='none'
 
-        }
+        // }
+        const span = document.getElementById('span')
+        span.addEventListener('click' ,()=>{
+            alert('hello welcome to our site')
+        })
 
     </script>
+    <script src="/siderbar/script.js"></script>
 </body>
             <!-- document.getElementsByClassName('sidebar')[0].classList.toggle('collapse'); -->
 </html>
